@@ -1,0 +1,163 @@
+<html lang="en">
+<head>
+<title>Kirin</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+        function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!-- //js -->
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+<link href="http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+</head>
+<style>
+    .nav-links {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        width: 100%
+    }
+    .copyright {
+        position: fixed;
+        z-index: 100;
+        bottom: 0;
+        width: 100%
+    }
+</style>
+<body>
+    <div class="nav-links">
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                       
+                    </button>
+                    <a class="navbar-brand" href="index.html"><h1>Kirin Ng</h1></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav link-effect">
+                        <li><a href="index.html" class="scroll">Home</a></li>
+                        <li><a href="AboutMe.html" class="scroll">About Me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <br><br><br>
+    <div class="about" id="about">
+		<div class="container">
+            <br><br>
+            <div align="center">
+                <img src="images/tutu.jpg" alt="image" class="touxiang">
+            </div>
+		</div>
+    </div>
+    
+    <div>
+        <div align="center"> 
+            <span class="about-tutu-tile">Kirin Ng</span>
+        </div>
+    </div>
+
+    <br><br><br><br>
+    <style type="text/css" media="screen">  
+        body { padding: 20px; font-size: 0.85em; font-family: georgia, serif; }  
+        .btn { display: block; position: center; background: #aaa; padding: 5px; float: center; color: #fff; text-decoration: none; cursor: pointer; }  
+        .btn * { font-style: normal; background-image: url(btn2.png); background-repeat: no-repeat; display: block; position: center; }  
+        .btn i { background-position: center; position: absolute; margin-bottom: -5px;  top: 0; left: 0; width: 5px; height: 5px; }  
+        .btn span { background-position: bottom left; left: -5px; padding: 0 0 5px 10px; margin-bottom: -5px; }  
+        .btn span i { background-position: bottom right; margin-bottom: 0; position: absolute; left: 100%; width: 10px; height: 100%; top: 0; }  
+        .btn span span { background-position: top right; position: absolute; right: -10px; margin-left: 10px; top: -5px; height: 0; }  
+        * html .btn span,  
+        * html .btn i { float: left; width: auto; background-image: none; cursor: pointer; }  
+        .btn.blue { background: #2ae; }  
+        .btn.green { background: #9d4; }  
+        .btn.pink { background: #e1a; }  
+        .btn:hover { background-color: #a00; }  
+        .btn:active { background-color: #444; }  
+        .btn[class] {  background-image: url(shade.png); background-position: bottom; }  
+        * html .btn { border: 3px double #aaa; }  
+        * html .btn.blue { border-color: #2ae; }  
+        * html .btn.green { border-color: #9d4; }  
+        * html .btn.pink { border-color: #e1a; }  
+        * html .btn:hover { border-color: #a00; }  
+        p { clear: both; padding-bottom: 2em; }  
+        form { margin-top: 2em; }  
+        form p .btn { margin-right: 1em; }  
+        textarea { margin: 1em 0;}  
+          </style>  
+    <div align="center">
+        <div >
+            <a>If you wany to connect with me, please type in your E-mail.</a><br>
+            <a>Your Name:<input  id ="name" type="text" name="fname" ><br /></a>
+            <a>Your E-mail:<input id ="email"  type="email" name="email" autocomplete="off" /><br/></a>
+            <a>Leaving a message:<input id ="data"  type="text" name="data" autocomplete="off" /><br/><br></a>
+            <input  onclick="submit()" type="submit" class="btn blue" id="frm1" value="submit">
+        </div>
+    </div>
+    <br/><br><br/><br><br/><br>
+    <div class="copyright">
+        <div class="container">
+            <p>Copyright &copy; 2018.Company name All rights reserved.</a></p>
+        </div>
+    </div>
+
+<!-- start-smoth-scrolling -->
+<script type="text/javascript">
+    // console.log(123);
+    function submit(){
+        var email= $("#email").val()+" ";
+        var data= $("#data").val()+" ";
+        var name= $("#name").val()+" ";
+
+        $.post("https://39.107.230.100/savefile.php",{
+            email:email,
+            data:data,
+            name:name,
+
+        },function(result){
+                   alert("I will contact you as soon as possible.")
+                });
+
+    }
+
+</script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function($){});
+</script>
+<!-- start-smoth-scrolling -->
+<!-- for bootstrap working -->
+<script src="js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+</body>
+
