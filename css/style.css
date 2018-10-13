@@ -485,6 +485,12 @@ div#about {
     color: #404040;
     margin-bottom: 20px;
 }
+.stylegridtext p_red {
+    font-size: 14px;
+    line-height: 27px;
+    color: #ff0300;
+    margin-bottom: 20px;
+}
 .readmore a,.w3_agile_mail_grid input[type="submit"]{
     padding: 10px 25px;
     background: #0099ff;
