@@ -70,7 +70,6 @@
         </div>
         <div class="row ">
             <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 text-center">
-                <form>
                     <label>YOUR NAME</label>
                     <div class="form-group" >
                         <input id ="name" type="text" name="fname" class="form-control" required="required" />
@@ -78,7 +77,7 @@
                     </div>
                     <label>YOUR EMAIL</label>
                     <div class="form-group" >
-                        <input input id ="email"  type="email" name="email" autocomplete="off" class="form-control" required="required" />
+                        <input  id ="email"  type="email" name="email" autocomplete="off" class="form-control" required="required" />
                     </div>
                     <label>MESSAGE</label>
                     <div class="form-group" >
@@ -87,7 +86,6 @@
                     <div class="form-group">
                         <input  onclick="submit()" type="submit" class="btn custom-btn-1 btn-block" id="frm1" value="submit">
                     </div>
-                </form>
             </div>
         </div>
     </div>
@@ -100,7 +98,7 @@
         var data= $("#data").val()+" ";
         var name= $("#name").val()+" ";
 
-        $.post("https://kirinng.com/savefile.php",{
+        $.post("http://39.107.230.100/savefile.php",{
             email:email,
             data:data,
             name:name,
