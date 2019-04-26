@@ -144,9 +144,10 @@ background-color:transparent;
    FOOTER STYLES
  ============================================================ */
 .footer {
-    text-align:right;
+    text-align:left;
     color:#fff;
     background-color:rgb(27, 106, 131);
     padding:20px;
     bottom: 50px;
+    width: 200%;
 }
