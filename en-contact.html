@@ -51,14 +51,14 @@
 
 
 <!--NAVBAR SECTION END-->
-<section id="contact" >
+<section id="contact">
 
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2  text-center">
                 <br><br><br><br>
                 <h2> CONTACT</h2>
-                <p >
+                <p>
                     <b>Beijingjiaotong University</b><br>
 
                     +(86)159 1092 6826<br>
@@ -70,22 +70,24 @@
         </div>
         <div class="row ">
             <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 text-center">
-                    <label>YOUR NAME</label>
-                    <div class="form-group" >
-                        <input id ="name" type="text" name="fname" class="form-control" required="required" />
+                <label>YOUR NAME</label>
+                <div class="form-group">
+                    <input id="name" type="text" name="fname" class="form-control" required="required"/>
 
-                    </div>
-                    <label>YOUR EMAIL</label>
-                    <div class="form-group" >
-                        <input  id ="email"  type="email" name="email" autocomplete="off" class="form-control" required="required" />
-                    </div>
-                    <label>MESSAGE</label>
-                    <div class="form-group" >
-                        <input id ="data"  type="text" name="data" autocomplete="off" class="form-control" style="min-height:120px;" ></textarea>
-                    </div>
-                    <div class="form-group">
-                        <input  onclick="submit()" type="submit" class="btn custom-btn-1 btn-block" id="frm1" value="submit">
-                    </div>
+                </div>
+                <label>YOUR EMAIL</label>
+                <div class="form-group">
+                    <input id="email" type="email" name="email" autocomplete="off" class="form-control"
+                           required="required"/>
+                </div>
+                <label>MESSAGE</label>
+                <div class="form-group">
+                    <input id="data" type="text" name="data" autocomplete="off" class="form-control"
+                           style="min-height:120px;"></textarea>
+                </div>
+                <div class="form-group">
+                    <input onclick="submit()" type="submit" class="btn custom-btn-1 btn-block" id="frm1" value="submit">
+                </div>
             </div>
         </div>
     </div>
@@ -93,18 +95,19 @@
 
 
 <script type="text/javascript">
-    function submit(){
-        var email= $("#email").val()+" ";
-        var data= $("#data").val()+" ";
-        var name= $("#name").val()+" ";
+    function submit() {
+        var email = $("#email").val() + " ";
+        var data = $("#data").val() + " ";
+        var name = $("#name").val() + " ";
 
-        $.post("http://39.107.230.100/savefile.php",{
-            email:email,
-            data:data,
-            name:name,
-        },function(result){
+        $.post("http://39.107.230.100/savefile.php", {
+            email: email,
+            data: data,
+            name: name,
+        }, function (result) {
             alert("I will contact you as soon as possible.")
-        });}
+        });
+    }
 </script>
 
 

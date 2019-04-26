@@ -51,14 +51,14 @@
 
 
 <!--NAVBAR SECTION END-->
-<section id="contact" >
+<section id="contact">
 
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2  text-center">
                 <br><br><br><br>
                 <h2> 联系方式</h2>
-                <p >
+                <p>
                     <b>北京交通大学</b><br>
 
                     +(86)159 1092 6826<br>
@@ -70,24 +70,24 @@
         </div>
         <div class="row ">
             <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 text-center">
-                <form>
-                    <label>您的姓名</label>
-                    <div class="form-group" >
-                        <input id ="name" type="text" name="name" class="form-control" required="required" />
+                <label>您的姓名</label>
+                <div class="form-group">
+                    <input id="name" type="text" name="name" class="form-control" required="required"/>
 
-                    </div>
-                    <label>您的电子邮箱</label>
-                    <div class="form-group" >
-                        <input input id ="email"  type="email" name="email" autocomplete="off" class="form-control" required="required" />
-                    </div>
-                    <label>您的留言</label>
-                    <div class="form-group" >
-                        <input id ="data"  type="text" name="data" autocomplete="off" class="form-control" style="min-height:120px;" ></textarea>
-                    </div>
-                    <div class="form-group">
-                        <input  onclick="submit()" type="submit" class="btn custom-btn-1 btn-block" id="frm1" value="提交">
-                    </div>
-                </form>
+                </div>
+                <label>您的电子邮箱</label>
+                <div class="form-group">
+                    <input input id="email" type="email" name="email" autocomplete="off" class="form-control"
+                           required="required"/>
+                </div>
+                <label>您的留言</label>
+                <div class="form-group">
+                    <input id="data" type="text" name="data" autocomplete="off" class="form-control"
+                           style="min-height:120px;"></textarea>
+                </div>
+                <div class="form-group">
+                    <input onclick="submit()" type="submit" class="btn custom-btn-1 btn-block" id="frm1" value="提交">
+                </div>
             </div>
         </div>
     </div>
@@ -95,18 +95,19 @@
 
 
 <script type="text/javascript">
-    function submit(){
+    function submit() {
         console.log("sdf");
-        var email= $("#email").val()+" ";
-        var data= $("#data").val()+" ";
-        var name= $("#name").val()+" ";
-        $.post("http://39.107.230.100/savefile.php",{
-            email:email,
-            data:data,
-            name:name
-        },function(result){
+        var email = $("#email").val() + " ";
+        var data = $("#data").val() + " ";
+        var name = $("#name").val() + " ";
+        $.post("http://39.107.230.100/savefile.php", {
+            email: email,
+            data: data,
+            name: name
+        }, function (result) {
             alert("I will contact you as soon as possible.")
-        });}
+        });
+    }
 </script>
 
 <!-- CORE JQUERY  -->
